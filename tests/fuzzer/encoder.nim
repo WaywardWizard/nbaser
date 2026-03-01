@@ -17,8 +17,8 @@ proc main(): void =
   var alpha = newStringOfCap(256)
   var input = newStringOfCap(1024)
   var encoded: string
-  alpha.shallow
-  input.shallow
+  alpha
+  input
 
   if stdin.isatty:
     quit 1

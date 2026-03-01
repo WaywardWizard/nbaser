@@ -214,7 +214,6 @@ func encode*(
   let size = ((src.len - ldrCtr).float * ifactor).ceil.int
   # let's provide sufficient capacity for our result
   result = newStringOfCap(size)
-  result.shallow
   var bx = newSeq[byte](size)
 
   # convert b256 array to nbaser
@@ -302,7 +301,6 @@ func decode* (
 
   let size = ((src.runeLen - ldrCtr).float * factor).ceil.int
   var b256 = newSeq[byte](size)
-  b256.shallow
 
   let runedAlphabet = baseAlphabet.toRunes
 

@@ -55,7 +55,7 @@ task check_all, "Compile check everything and run tests":
 
 ## benching
 task benchmark, "Runs built-in benchmark":
-  exec "nim c -f --verbosity:0 --hints:off -d:danger --gc:markAndSweep -o:/tmp/nim/nbaser/bench -r tests/benchmark.nim"
+  exec "nim c -f --verbosity:0 --hints:off -d:danger -o:/tmp/nim/nbaser/bench -r tests/benchmark.nim"
 
 ## fuzzing
 task fuzz_decoder, "Runs afl on decoder":
